@@ -1,0 +1,14 @@
+include header
+.container
+  main.shop
+    .titleWrap.shop__titleWrap
+      h1.title.shop__title онлайн-заказ
+    .shop__gridWrap
+      include sort
+      .shop__productList.productList
+        .productList__items(onmouseover='productItemHoverEffect()', onmouseout='productItemMouseoutEffect()')
+          each val, index in products
+            include card
+      include cart
+
+include footer

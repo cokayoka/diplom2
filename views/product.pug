@@ -1,0 +1,9 @@
+include header
+.container
+    main
+        p #{products[0]['name']}
+        img(src="img/"+products[0]['image'])
+        p #{products[0]['description']}
+        p Цена: #{products[0]['cost'].toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$& ')}р.
+        button( class="add-to-cart" data-products_id=products[0]['id']) To cart
+        include footer

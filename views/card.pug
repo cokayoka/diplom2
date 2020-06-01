@@ -1,0 +1,9 @@
+.productListItem.productList__item
+  .productListItem__img
+    img(src='img/'+val['image'], alt='')
+  .productListItem__aboutProduct.aboutProduct
+    .aboutProduct__name #{val['name']}
+    .aboutProduct__price #{val['cost'].toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$& ')}р.
+    .aboutProduct__description #{val['description']}
+    button(data-products_id=val['id'] class="addBtn aboutProduct__addBtn add-to-cart")
+      img(src='img/icons/addBtn.png', alt='' class="")

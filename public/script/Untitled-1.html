@@ -1,0 +1,22 @@
+<li class="cartList__item cartListItem">
+    <div class="cartListItem__nameAndQuantity"><a href="products?id=${key}">${cart[key]} X ${data[key]['name']}</a></div>
+    <div class="cartListItem__price">${data[key]['cost']*cart[key]}р.
+        <div>
+            <div class="cartListItem__btns">
+                <button class="addBtn cart__addBtn" data-products_id="${key}">
+        <img src='img/icons/addBtn.png' alt=''>
+        </div>
+        <button class="closeBtn cart__closeBtn" data-products_id="${key}">
+        <img src='img/icons/close.png' alt=''>
+        </div>
+    </div>
+    </li>
+
+    filedata = req.file;
+    filename = JSON.stringify(filedata.filename);
+    console.log(req.body);
+    if (!filedata || req.body.productName || req.body.productCost || req.body.productCat) {
+        alert('Заполнены не все поля');
+    } else {
+        res.send('Файл загружен');
+    }

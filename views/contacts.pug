@@ -1,0 +1,15 @@
+include header
+.container
+  main.contacts
+    .titleWrap.contacts__titleWrap
+      h1.title.contacts__title контакты
+    p.contacts__text Планируете особенное событие? Давайте обсудим:
+    .contacts__gridWrap
+      form.contacts__form(action='')
+        input.form__input(type='text', name='name', id='', placeholder='Name')
+        input.form__input(type='email', name='email', id='', placeholder='Email')
+        input.form__input(type='text', name='subject', id='', placeholder='Subject')
+        textarea.form__textarea(name='textarea', id='', placeholder='Message')
+        input.form__btn(type='button', value='Отправить')
+      iframe.contacts__map(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1131.5381646181554!2d65.34850357907757!3d55.44390100628878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43b7bc518d673f3f%3A0x554f317f13bcde61!2z0YPQuy4g0J_RgNC-0LvQtdGC0LDRgNGB0LrQsNGPLCA1OSwg0JrRg9GA0LPQsNC9LCDQmtGD0YDQs9Cw0L3RgdC60LDRjyDQvtCx0LsuLCA2NDAwMDA!5e0!3m2!1sru!2sru!4v1589114507982!5m2!1sru!2sru', width='365', height='277', frameborder='0', style='border:0;', allowfullscreen='', aria-hidden='false', tabindex='0')
+include footer

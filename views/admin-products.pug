@@ -1,0 +1,16 @@
+include header
+.container
+    main.admin-products
+        .shop__productList.productList
+            .productList__items(onmouseover='productItemHoverEffect()', onmouseout='productItemMouseoutEffect()')
+                each val, index in products
+                    include adminProductCard
+        a(href="/add-product") 
+            button.cart__orderBtn
+                | Добавить продукт
+        a(href="/admin")
+            button.hiddenWindow__btn.hiddenWindow__btn_admin
+                img(src='img/icons/leftArrow.png', alt='')
+                | Назад
+                
+include footer

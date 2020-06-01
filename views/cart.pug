@@ -1,0 +1,13 @@
+.shop__cart.cart
+  .cart__head.cartHead
+    p.cartHead__ins Мой заказ
+  ul.cart__list.cartList#cart-list
+  .cart__line
+  .cart__subtotalWrap
+    .subtotal__ins Итого:
+    .subtotal__amount#amount 0р.
+  //textarea.cart__speacialRequest(name='', id='', placeholder='Заметки к заказу')
+  a(href="/order")
+    button.cart__orderBtn
+      | Заказать 
+      img(src='img/icons/rightArrow.png', alt='')

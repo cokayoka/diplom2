@@ -1,0 +1,8 @@
+.adminProductCard
+    img(src='img/'+val['image'], alt='')
+    p #{val['name']}
+    p #{val['cost'].toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$& ')}р.
+    p #{val['description']}
+        a(href=`/deleteProduct?id=${val['id']}`)
+            button(data-products_id=val['id'] class="addBtn aboutProduct__addBtn delete-from-base")
+                img(src='img/icons/close.png', alt='' class="")

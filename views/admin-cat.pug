@@ -1,0 +1,17 @@
+include header
+.container
+    main
+        h2.adminCat__header| Список категорий
+        ul.sort__category.category.category_admin
+            each val, index in categories
+                li.category__name.category__name_admin #{val['category']}
+                    a(href=`/deleteCat?id=${val['id']}`)
+                        button(data-products_id=val['id'] class="addBtn aboutProduct__addBtn delete-cat-from-base")
+                            img(src='img/icons/close.png', alt='' class="")
+        a(href="/admin")
+            button.hiddenWindow__btn.hiddenWindow__btn_admin
+                img(src='img/icons/leftArrow.png', alt='')
+                | Назад
+        a(href="/addCat") 
+            button.cart__orderBtn
+                |Добавить категорию

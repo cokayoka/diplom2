@@ -1,0 +1,23 @@
+include header
+.container   
+    main  
+        form#addProductForm(action="/upload-image" method="POST" enctype="multipart/form-data")
+            label(for='productName') Введите наименование продукта
+            input(type='text', id='productName', name='productName').form__input.form__input_withLabel
+            label(for='cost') Введите цену за шт.
+            input(type='text',  id='productCost', name='productCost').form__input.form__input_withLabel
+            label(for='file')
+            input(type = 'file', id='filedata', name='filedata' accept="image/*").form__input.form__input_withLabel
+            label(for='description') Введите описание
+            textarea(id='productDescription', name='productDescription').form__input.form__input_withLabel
+            label(for='cat') Укажите категорию
+            select(id='productCat', name='productCat').category__option
+                each val,index in categories
+                    option.category__option #{val['category']}    
+            input.form__btn.orderForm__btn.addCategory__btn(type='submit', value='Добавить')
+        a(href="/admin-products")
+            button.hiddenWindow__btn.hiddenWindow__btn_admin
+                img(src='img/icons/leftArrow.png', alt='')
+                | Назад
+script(src="script/addProduct.js")
+include footer

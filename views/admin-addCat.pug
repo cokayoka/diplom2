@@ -1,0 +1,13 @@
+include header
+.container
+    main
+        form#addCatForm
+            label(for='productName') Введите наименование категории
+            input(type='text', id='catName', name='catName').form__input.form__input_withLabel
+            input.form__btn.orderForm__btn.addCategory__btn(type='submit', value='Добавить')
+        a(href="/admin-cat")
+            button.hiddenWindow__btn.hiddenWindow__btn_admin
+                img(src='img/icons/leftArrow.png', alt='')
+                | Назад
+script(src="script/addCat.js")
+include footer

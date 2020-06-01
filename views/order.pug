@@ -1,0 +1,33 @@
+include header
+.container
+  main.shop
+    .titleWrap.shop__titleWrap
+      h1.title.shop__title онлайн-заказ
+    .shop__hiddenWindow.hiddenWindow
+        .hiddenWindow__flexWrap
+            .hiddenWindow__leftBlock
+                .order__header Заказ
+                ul.order__list.orderList#cart-list
+                    li.orderList__item
+                        | 1 х Шоколадный кекс
+                        span.orderListItem__price 100р.
+                .order__total#amount
+                    
+                    span.orderTotal__price 100р.
+            .hiddenWindow__rightBlock
+                form#order(action="")
+                    label(for='username') Введите ваше имя
+                    input.form__input.form__input_withLabel(type='text', name='name', id='orderName', placeholder='Name')
+                    label(for='phone') Введите ваш номер телефона
+                    input.form__input.form__input_withLabel(type='text', name='phone', id='orderPhone', placeholder='Phone: +380505555555')
+                    label(for='email') Введите ваш e-mail
+                    input.form__input.form__input_withLabel(type='email', name='email', id='orderEmail', placeholder='Email: mail@example.com')
+                    label(for='address') Введите ваш адресс
+                    input.form__input.form__input_withLabel(name='textarea', id='orderAddress', placeholder='Address')
+                    input.form__btn.orderForm__btn(type='submit', value='Оформить заказ')
+        a(href="/shop")
+            button.hiddenWindow__btn
+                img(src='img/icons/leftArrow.png', alt='')
+                | Назад
+script(src='script/order.js')
+include footer
